@@ -1,0 +1,80 @@
+#solar-panel-pollution pre-analysis documentation
+
+Edits will be from the bottom up, and version-controlled
+
+%------------------------------------------------------%
+2021-11-14
+% Created by Jillian Stallman
+
+
+This document is to house the pre-analysis workings of a project on solar panels and pollution.
+
+Lead (Jillian Stallman), got the idea from an article in the October 30 Economist, "An Accurate Tally of the World's Solar Panel Stations", available at
+https://www.economist.com/science-and-technology/an-accurate-tally-of-the-worlds-solar-power-stations/21805945.
+
+Researchers Kruitwagen et al (2021) in Nature posted an AI-learning census of solar panels from June 01, 2016 to September 30, 2018 in which they
+estimated the capacity of solar panels via satellite data and a learning algorithm for panel situations greater than 1Kw.
+
+That source is
+
+Kruitwagen, L., Story, K.T., Friedrich, J. et al. A global inventory of photovoltaic solar energy generating units. 
+Nature 598, 604–610 (2021). https://doi.org/10.1038/s41586-021-03957-7
+
+and the authors have generously made their final data available.
+
+
+Upon seeing that the data were public and spatially linked, I came up with the idea to look at solar panels coming online as a supply shock for energy
+and wondered whether this supply shock would cause ambient air pollution to improve or deteriorate in highly localized areas
+
+One complication with this is that with advanced grids, the solar power generated in one locale might be sent far away. However, in less developed grids,
+it is more likely that the power will remain closer by. In addition, the transportation costs of energy suggest that solar power would most likely
+displace energy nearer to the field rather than further from the field.
+
+We can use the solar panels coming online as a shock to the energy supply. If the solar panels are displacing dirty energy, we should see 
+that ambient air pollution declines
+
+The data I plan to use for these are from 1) PurpleAir and 2) government sensors.
+
+The advantage of incorporating both is that PurpleAir is highly accurate for PM2.5, which is the primary pollutant that causes health difficulties
+
+Additionally, the geographic reach of the two types of data sources will provide more observations than just government locations, and allows for a highly granular
+analysis.
+
+
+Kruitwagen et al (2021) note that the panels typically exhibit a two-month lag from when they observe a field fully constructed, and when local governments
+say that the field is up and running. This poses a little difficulty, but perhaps we can take the 1-month, 2-month, and 3-month average pollution reading. If it
+takes 2 months for the fields to come online, we should see no effects in the first month, and then effects in the second and third months
+
+Of course, these readings should also exhibit seasonality: air tends to be worse in the winter, when more coal is burned for energy in much of the world.
+
+This analysis of short-run effects can then be used as an instrument for health outcomes from improved air pollution, where a solar panel field coming
+online instruments for cleaner air (if the first stage holds) and then health outcomes such as local hospital admissions for air-related illnesses are taken
+as the second-stage dependent variable. Other dependent variables could be sick days assessed.
+
+We can also look at the effects of solar panels on air pollution in the longer run, up to two years in this case because that's all the solar panel data we have,
+or further if we take the solar panels constructed from June 01 2016 to September 30, 2018 as given, and look at their effects in the long run.
+
+There might be two types of effects we could hypothesize. The first is that this increased energy supply is an outward shift in the energy supply curve. If the 
+demand curve for energy was also shifting outward, we could see no net change in polllution if the other energy sources that came online were dirty, or if
+dirty sources were never displaced and the solar energy merely added to the available energy.
+
+Alternatively, if the demand curve shifts out and no dirty energy is added, but instead clean energy is added, we should see improvements in pollution over time.
+
+Finally, if there's no shift in the demand curve but only shifts in the supply curve, we should observe a fall in the price of energy, and only improvements
+in ambient air pollution.
+
+One way to determine which of these conceivably occurred might be to measure the price of energy paid at the household level in the areas highly local to the solar
+fields.
+
+
+If the solar energy only added to the energy mix and the dirty energy was never displaced, we may see no improvement in health outcomes over time. If solar energy
+displaced dirty energy, we should expect improvements in health outcomes over time.
+
+
+To this date, I have not downloaded governmental air quality data, and have performed no analysis.
+
+The emails to and from the Purple Air contact on 2021-11-13 have been printed and will be put in this folder.
+
+End documentation 2021-11-14
+%---------------------------------------------------------------------------------------------------------%
+
